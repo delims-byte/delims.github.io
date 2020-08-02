@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-17T16:57:21+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/08/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-08-17T16:43:02+08:00</published><updated>2018-08-17T16:43:02+08:00</updated><id>http://localhost:4000/jekyll/update/2018/08/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/08/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">svn服务器搭建以及常用命令使用方法</title><link href="http://localhost:4000/2018/08/17/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html" rel="alternate" type="text/html" title="svn服务器搭建以及常用命令使用方法" /><published>2018-08-17T00:00:00+08:00</published><updated>2018-08-17T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/17/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2018/08/17/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;开发这几年来，基本都是用的svn客户端管理来管理代码,用过 Versions 和 CornerStone ，很少用命令行，对svn的命令掌握的也不全。我觉得要想在开发这条路上走的更远，熟练的用命令行来管理代码是最基本的技能。用svn命令行管理代码并不复杂，很容易学习，熟练之后会觉得比图形化工具还方便，因为只用键盘就可以操作。最主要是还可以提高逼格。我觉得十分有必要抽一点时间系统的学习一下svn的常用命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;创建一个本地svn仓库&quot;&gt;创建一个本地SVN仓库&lt;/h1&gt;
+
+&lt;p&gt;为了方便演示svn命令，又不想用自己公司的服务器，可以先搭建一个本地svn服务器。打开终端输入命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:~ delims$ svnadmin create ~/svnserver/
+delimss-MacBook-Pro:~ delims$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;svnadmin create [PATH] 是在本地创建一个仓库，此时控制台没有任何输出，我们看看这个目标下生成的文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:~ delims$ cd ~/svnserver/
+delimss-MacBook-Pro:svnserver delims$ ls
+README.txt	db		hooks
+conf		format		locks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看到生成了一堆文件和文件夹，conf文件夹里包含了仓库的配置信息&lt;br /&gt;
+看下里面有什么&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:svnserver delims$ cd conf/
+delimss-MacBook-Pro:conf delims$ ls
+authz		hooks-env.tmpl	passwd		svnserve.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看到conf文件夹里包含了4个文件&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;文件&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;svnserve.conf&lt;/td&gt;
+      &lt;td&gt;守护进程配置文件&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;authz&lt;/td&gt;
+      &lt;td&gt;保存了用户名和权限&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;passwd&lt;/td&gt;
+      &lt;td&gt;保存了用户名的密码&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;hooks-env.tmpl&lt;/td&gt;
+      &lt;td&gt;钩子脚本环境配置文件&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;这几个配置文件，有用的代码都是被注释掉的，我们需要手动修改一下，主要是删除注释符号#，其次也会适当做些修改，修改如下：&lt;/p&gt;
+
+&lt;h2 id=&quot;svnserveconf&quot;&gt;svnserve.conf&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;修改前&lt;/th&gt;
+      &lt;th&gt;修改后&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[general]&lt;br /&gt;# anon-access = read&lt;br /&gt;# auth-access = write&lt;br /&gt;# password-db = passwd&lt;br /&gt;# authz-db = authz&lt;/td&gt;
+      &lt;td&gt;[general]&lt;br /&gt;anon-access = none&lt;br /&gt;auth-access = write&lt;br /&gt;password-db = passwd&lt;br /&gt;authz-db = authz&lt;/td&gt;
+      &lt;td&gt;anon-access 代表匿名访问权限&lt;br /&gt;赋值给none表示不允许匿名访问&lt;br /&gt;&lt;strong&gt;注意&lt;/strong&gt;:#后面有一个空格也要删除&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;authz&quot;&gt;authz&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;修改前&lt;/th&gt;
+      &lt;th&gt;修改后&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[groups]&lt;br /&gt;# harry_and_sally = harry,sally&lt;br /&gt;# [/foo/bar]&lt;br /&gt;# harry = rw&lt;br /&gt;# * = r&lt;/td&gt;
+      &lt;td&gt;[groups]&lt;br /&gt;harry_and_sally = harry,sally&lt;br /&gt;[/]&lt;br /&gt;&amp;amp;harry_and_sally = rw&lt;br /&gt;* = r&lt;/td&gt;
+      &lt;td&gt;修改这三行，即创建两个用户并组成&lt;br /&gt;一个group，并给予此group所有成员&lt;br /&gt;根目录的读写权限&lt;br /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;passwd&quot;&gt;passwd&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;修改前&lt;/th&gt;
+      &lt;th&gt;修改后&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[users]&lt;br /&gt;# harry = harryssecret&lt;br /&gt;# sally = sallyssecret&lt;/td&gt;
+      &lt;td&gt;[users]&lt;br /&gt;harry = 123&lt;br /&gt;sally = 123&lt;/td&gt;
+      &lt;td&gt;设置用户密码，只是用来演示，&lt;br /&gt;我们就设置一个简单的吧&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;启动本地svn服务器&quot;&gt;启动本地svn服务器&lt;/h1&gt;
+&lt;p&gt;配置好以后，我们就启动服务器，键入命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:conf delims$ svnserve -d -r ~/svnserver/
+delimss-MacBook-Pro:conf delims$ ps -e | grep svn
+  974 ??         0:00.00 /Applications/Xcode.app/Contents/Developer/usr/bin/svnserve -d -r /Users/delims/svnserver/
+  977 ttys000    0:00.00 grep svn
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;此时可以看到成功开启了svnserve进程，还可以发现svnserve工具是包含在Xcode中的，不得不感叹，Xcode真是一个百宝囊。&lt;/p&gt;
+
+&lt;p&gt;我们随便找个目录把我们本地svn服务器上的仓库拉下来&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn co svn://localhost
+Authentication realm: &amp;lt;svn://localhost:3690&amp;gt; 7a441335-b969-42c4-aa80-56391f894982
+Password for 'delims': *****  //输入macOS用户密码
+
+Authentication realm: &amp;lt;svn://localhost:3690&amp;gt; 7a441335-b969-42c4-aa80-56391f894982
+Username: harry  //刚才配置的用户名harry
+Password for 'harry': ***  //输入我们配置的简单密码123
+
+Checked out revision 0.  //成功检出，版本号为 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看到成功检出了我们本地服务器的仓库并放在了本地。。。&lt;/p&gt;
+
+&lt;h1 id=&quot;svn命令行操作&quot;&gt;svn命令行操作&lt;/h1&gt;
+
+&lt;p&gt;我们先来添加一个文件并提交到服务器&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ echo 1 &amp;gt; 1.txt  //添加一个文件
+delimss-MacBook-Pro:temp delims$ ls
+1.txt  //文件添加了
+delimss-MacBook-Pro:temp delims$ svn st 
+?       1.txt  //可以看到此文件的状态是？，也就是还没有加入到版本控制
+delimss-MacBook-Pro:temp delims$ svn add 1.txt //加入到版本控制
+A         1.txt //状态变为A，表示已经加入到了版本控制
+
+//提交到服务器，并添加注释
+delimss-MacBook-Pro:temp delims$ svn ci 1.txt -m &quot;提交第一个文件&quot; 
+Adding         1.txt  
+Transmitting file data .done
+Committing transaction...
+Committed revision 1. //已成功上传到服务器，版本号+1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;为了更好的演示，我将AFNetworking的源码放到根目录&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ ls
+1.txt		AFNetworking
+delimss-MacBook-Pro:temp delims$ svn st
+?       AFNetworking  //可以看到AFNetworking还没有加入版本控制
+delimss-MacBook-Pro:temp delims$ svn add AFNetworking/ \\添加上
+这句命令执行完会显示有大量的被添加记录，下面提交到服务器
+delimss-MacBook-Pro:temp delims$ svn ci AFNetworking -m &quot;添加AFNetworking&quot;
+这句命令执行完后，最后面会显示，说明一已经成功上传到服务器，版本号是2
+Transmitting file data ..................................................................................................................................................................................................................................done
+Committing transaction...
+Committed revision 2.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn st  //查看状态，没有任何输出，表示当前没有文件变动
+delimss-MacBook-Pro:temp delims$ svn info //查看当前svn信息，发现版本号依然是0
+Path: .
+Working Copy Root Path: /Users/delims/temp
+URL: svn://localhost
+Relative URL: ^/
+Repository Root: svn://localhost
+Repository UUID: 7a441335-b969-42c4-aa80-56391f894982
+Revision: 0
+Node Kind: directory
+Schedule: normal
+Last Changed Rev: 0
+Last Changed Date: 2018-08-17 09:59:13 +0800 (Fri, 17 Aug 2018)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;更新一下代码&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn update  //更新一下svn
+Updating '.':
+At revision 2.
+delimss-MacBook-Pro:temp delims$ svn info
+Path: .
+Working Copy Root Path: /Users/delims/temp
+URL: svn://localhost
+Relative URL: ^/
+Repository Root: svn://localhost
+Repository UUID: 7a441335-b969-42c4-aa80-56391f894982
+Revision: 2
+Node Kind: directory
+Schedule: normal
+Last Changed Author: harry
+Last Changed Rev: 2
+Last Changed Date: 2018-08-17 12:55:56 +0800 (Fri, 17 Aug 2018)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;查看一下svn 提交记录&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn log
+------------------------------------------------------------------------
+r2 | harry | 2018-08-17 12:55:56 +0800 (Fri, 17 Aug 2018) | 1 line
+
+添加AFNetworking
+------------------------------------------------------------------------
+r1 | harry | 2018-08-17 11:44:12 +0800 (Fri, 17 Aug 2018) | 1 line
+
+提交第一个文件
+------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; 这个命令是查看当前仓库所有文件的所有提交记录，如果只是查看某个文件的记录就这样&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn log 1.txt 
+------------------------------------------------------------------------
+r1 | harry | 2018-08-17 11:44:12 +0800 (Fri, 17 Aug 2018) | 1 line
+
+提交第一个文件
+------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果只查看最近的几条记录就这样&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn log -l 1  //查看最近的1条记录
+------------------------------------------------------------------------
+r2 | harry | 2018-08-17 12:55:56 +0800 (Fri, 17 Aug 2018) | 1 line
+
+添加AFNetworking
+------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;当前版本是2，如果我要回到版本1.就这样&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+delimss-MacBook-Pro:temp delims$ svn update -r 1 //指定版本号
+Updating '.':
+D    AFNetworking
+Updated to revision 1.
+delimss-MacBook-Pro:temp delims$ ls
+1.txt  //已经回到版本1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;浏览服务器上的文件可以这样操作&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn list svn://localhost
+1.txt
+AFNetworking/
+delimss-MacBook-Pro:temp delims$ svn list svn://localhost/AFNetworking
+.cocoadocs.yml
+.git/
+.gitignore
+.travis.yml
+AFNetworking/
+AFNetworking.podspec
+AFNetworking.xcodeproj/
+AFNetworking.xcworkspace/
+CHANGELOG.md
+CONTRIBUTING.md
+Example/
+Framework/
+LICENSE
+README.md
+Tests/
+UIKit+AFNetworking/
+fastlane/
+delimss-MacBook-Pro:temp delims$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;创建一个新分支&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn copy svn://localhost/AFNetworking svn://localhost/AFNetworking2 -m &quot;创建一个新分支&quot;
+Committing transaction...
+Committed revision 3.  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;再来看下服务器上的目录&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn list svn://localhost
+1.txt
+AFNetworking/
+AFNetworking2/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看到服务器上的目录已经被更改了&lt;/p&gt;
+
+&lt;p&gt;更新本地，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn update
+这里会输出大量日志
+delimss-MacBook-Pro:temp delims$ ls 
+1.txt		AFNetworking	AFNetworking2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;可以看到本地文件和服务器同步了
+修改文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;delimss-MacBook-Pro:temp delims$ svn st
+M       AFNetworking/README.md
+delimss-MacBook-Pro:temp delims$ svn ci AFNetworking/README.md -m &quot;修改一个文件&quot; 
+Sending        AFNetworking/README.md
+Transmitting file data .done
+Committing transaction...
+Committed revision 4.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;先介绍这些吧&lt;/p&gt;
+
+&lt;p&gt;键入&lt;code class=&quot;highlighter-rouge&quot;&gt;svn help&lt;/code&gt;查看svn所有命令,打印如下:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   add &amp;lt;br&amp;gt;
+   auth &amp;lt;br&amp;gt;
+   blame (praise, annotate, ann) &amp;lt;br&amp;gt;
+   cat &amp;lt;br&amp;gt;
+   changelist (cl) &amp;lt;br&amp;gt;
+   checkout (co) &amp;lt;br&amp;gt;
+   cleanup &amp;lt;br&amp;gt;
+   commit (ci) &amp;lt;br&amp;gt;
+   copy (cp) &amp;lt;br&amp;gt;
+   delete (del, remove, rm) &amp;lt;br&amp;gt;
+   diff (di) &amp;lt;br&amp;gt;
+   export &amp;lt;br&amp;gt;
+   help (?, h) &amp;lt;br&amp;gt;
+   import &amp;lt;br&amp;gt;
+   info &amp;lt;br&amp;gt;
+   list (ls) &amp;lt;br&amp;gt;
+   lock &amp;lt;br&amp;gt;
+   log &amp;lt;br&amp;gt;
+   merge &amp;lt;br&amp;gt;
+   mergeinfo &amp;lt;br&amp;gt;
+   mkdir &amp;lt;br&amp;gt;
+   move (mv, rename, ren) &amp;lt;br&amp;gt;
+   patch &amp;lt;br&amp;gt;
+   propdel (pdel, pd) &amp;lt;br&amp;gt;
+   propedit (pedit, pe) &amp;lt;br&amp;gt;
+   propget (pget, pg) &amp;lt;br&amp;gt;
+   proplist (plist, pl) &amp;lt;br&amp;gt;
+   propset (pset, ps) &amp;lt;br&amp;gt;
+   relocate &amp;lt;br&amp;gt;
+   resolve &amp;lt;br&amp;gt;
+   resolved &amp;lt;br&amp;gt;
+   revert &amp;lt;br&amp;gt;
+   status (stat, st) &amp;lt;br&amp;gt;
+   switch (sw) &amp;lt;br&amp;gt;
+   unlock &amp;lt;br&amp;gt;
+   update (up) &amp;lt;br&amp;gt;
+   upgrade &amp;lt;br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>delims</name></author><summary type="html">前言</summary></entry><entry><title type="html">可以通过手机壳颜色来改变app的主题吗</title><link href="http://localhost:4000/2018/08/03/%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E6%89%8B%E6%9C%BA%E5%A3%B3%E9%A2%9C%E8%89%B2%E6%9D%A5%E6%94%B9%E5%8F%98app%E7%9A%84%E4%B8%BB%E9%A2%98%E5%90%97.html" rel="alternate" type="text/html" title="可以通过手机壳颜色来改变app的主题吗" /><published>2018-08-03T00:00:00+08:00</published><updated>2018-08-03T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/03/%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E6%89%8B%E6%9C%BA%E5%A3%B3%E9%A2%9C%E8%89%B2%E6%9D%A5%E6%94%B9%E5%8F%98app%E7%9A%84%E4%B8%BB%E9%A2%98%E5%90%97</id><content type="html" xml:base="http://localhost:4000/2018/08/03/%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E6%89%8B%E6%9C%BA%E5%A3%B3%E9%A2%9C%E8%89%B2%E6%9D%A5%E6%94%B9%E5%8F%98app%E7%9A%84%E4%B8%BB%E9%A2%98%E5%90%97.html">&lt;h4 id=&quot;背景&quot;&gt;背景&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;某互联网公司产品经理提了个需求，要求app做到可以根据用户手机壳颜色来改变app主题颜色，最后产品经理和程序员打了起来。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;最近这件事刷了屏，不知道这件事是不是网友故意调侃。自古以来程序员和产品经理似乎都是一对冤家，哈哈，扯远了。想想产品经理提的这个需求也挺奇葩的。这个根本没法实现嘛，气愤中。。&lt;/p&gt;
+
+&lt;p&gt;冷静下来，思考一下，这个需求到底能不能实现呢？我觉得可以考虑从下面这个方案入手。&lt;/p&gt;
+
+&lt;h4 id=&quot;方案&quot;&gt;方案&lt;/h4&gt;
+&lt;p&gt;启动前置摄像头，根据拍摄到的用户眼睛中手机壳的倒影来检测手机壳的颜色。&lt;/p&gt;
+
+&lt;h4 id=&quot;可行性&quot;&gt;可行性&lt;/h4&gt;
+&lt;p&gt;要想检测用户眼睛中手机的倒影，那需要先分析一下前置摄像头的视力是多少。我们都知道正常人视力是1.0，对应的视角是1角分，当然也有好眼1.5或2.0，对应视角是0.7角分和0.5角分。&lt;/p&gt;
+
+&lt;p&gt;我用iPhone 6s距离5米通过后置摄像头拍摄视力表，大概可以勉强拍清1.2，1.2已经开始模糊，1.5已经变成了小黑点。iPhone6s的后置摄像头是1200万像素，而前置摄像头低于这个像素。我没有使用过手机的前置摄像头拍摄过视力表，但是可以通过像素数来大体推算一下&lt;/p&gt;
+
+&lt;p&gt;iPhone 6s 前置摄像头是500万像素，对应视力 500/1200 * 1.2 = 0.5
+iPhone X 前摄摄像头是700万像素，对应视力 700/1200 * 1.2 = 0.7&lt;/p&gt;
+
+&lt;h6 id=&quot;凸面镜&quot;&gt;凸面镜&lt;/h6&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;凸面镜成像，属于光学规律。平行光线投射到凸面镜上，反射的光线将成为散开光线，如果顺着反射光线的相反方向延伸到凸面镜镜面的后面，可会聚并相交于一点，这一点就是凸面镜的主焦点（F）。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;角膜可以看做是一个凸面镜，角膜的屈光度是43D (数据来自于《眼科学》)，那么角膜的焦距是
+&lt;strong&gt;1 ÷ 43 ≈ 0.0233米，即 2.33厘米，&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果一束平行光通过角膜反射产生倒影，那么倒影的虚像就在角膜后方的2.33厘米处。但是我们看手机，手机漫反射发出的光不是平行光，而是散射光，散射光通过角膜反射产生的倒影距离角膜光心比平行光要远。远多少呢。我们来计算一下。&lt;/p&gt;
+
+&lt;p&gt;假设我们看手机的距离是30厘米，这30厘米也是焦距，产生的屈光度是
+&lt;strong&gt;1 ÷ 0.3 ≈ 3.3D&lt;/strong&gt;
+这个屈光度会抵消掉角膜的屈光度，那么倒影的焦距是
+&lt;strong&gt;1 ÷ (43-3.3) ≈ 0.0252米，即2.52厘米&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;倒影的大小是多少呢。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;手机壳基本都是套在手机上，正面看只能看到边框，假设手机壳的边框宽度是0.5厘米，根据相似三角形可以计算出，倒影中边框的宽度是&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.52 ÷ (2.52+30) * 0.5 ≈ 0.0775厘米&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;你是不是被绕晕了？没关系，你只需要知道&lt;strong&gt;0.0775厘米&lt;/strong&gt;就是距离眼睛30厘米的手机壳边框在角膜中倒影的宽度就可以了。
+手机前置摄像头要想辨认角膜中的手机壳，那么需要的视角是多少呢？
+我们可以大体看做这是一个由&lt;strong&gt;0.0775&lt;/strong&gt;厘米和&lt;strong&gt;30+2.52&lt;/strong&gt;厘米作为两条直角边形成的直角三角形，这个最小的锐角就是视角，通过反三角函数计算得出视角是&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;arcsin(0.0775 ÷ 32.52) ≈ 0.1365445°&lt;/strong&gt;
+转成角分就是 &lt;strong&gt;8.193′&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这个视角对应的视力是多少度呢
+推算一下&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;视力1.0的视角是1′&lt;/li&gt;
+  &lt;li&gt;视力0.1的视角是10′&lt;/li&gt;
+  &lt;li&gt;视力2.0的视角是0.5′
+可以推算出，在视力1.0视角是1′的基础上
+&lt;strong&gt;视角放大几倍就是视力数值除以几&lt;/strong&gt;
+&lt;strong&gt;视角缩小几倍就是视力数值乘以几&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;可以计算出8.19′的视角对应的视力数值是 1 ÷ 8.19 ≈ 0.12&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;手机前置摄像头的视力达到0.12就可以距离眼睛30厘米拍摄到用户眼睛中手机壳前边框宽度并成像为1像素。前面推算出前置摄像头视力为0.5以上，那么可以成像为4像素以上。&lt;/p&gt;
+
+&lt;p&gt;可以推断出现在流行的手机基本都可以通过前摄摄像头解析到用户角膜中的手机壳的倒影。这只是理论数据，实际当中可能会有下面几个影响因素：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;光线太弱导致成像不清楚&lt;/li&gt;
+  &lt;li&gt;摄像头像素达到了，但是解析能力太差，导致成像不清楚&lt;/li&gt;
+  &lt;li&gt;最主要是，角膜并镜子，对光线的反射能力太差，导致倒影发虚&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;但是手机将图像数字化后，可以分析图像的颜色数值来精确判断，即使一点色差都可以察觉到，所以这个或许可以实现。主要还是看手机对图像的的捕捉和解析能力。&lt;/p&gt;
+
+&lt;h4 id=&quot;结论&quot;&gt;结论&lt;/h4&gt;
+&lt;p&gt;通过分析，这个需求也并不是完全不可能实现，只是对技术以及硬件的要求都很高。&lt;/p&gt;
+
+&lt;h4 id=&quot;声明&quot;&gt;声明&lt;/h4&gt;
+&lt;p&gt;本文为本人原创，数据分析计算过程中可能存在错误。如需转载请注明原文地址，谢谢~&lt;/p&gt;</content><author><name>delims</name></author><category term="iOS" /><summary type="html">背景 某互联网公司产品经理提了个需求，要求app做到可以根据用户手机壳颜色来改变app主题颜色，最后产品经理和程序员打了起来。</summary></entry><entry><title type="html">快速学会Hybrid开发</title><link href="http://localhost:4000/2018/08/02/%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9AHybrid%E5%BC%80%E5%8F%91.html" rel="alternate" type="text/html" title="快速学会Hybrid开发" /><published>2018-08-02T00:00:00+08:00</published><updated>2018-08-02T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/02/%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9AHybrid%E5%BC%80%E5%8F%91</id><content type="html" xml:base="http://localhost:4000/2018/08/02/%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9AHybrid%E5%BC%80%E5%8F%91.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;初次听到&lt;em&gt;oc与js交互&lt;/em&gt;时，你可能会觉得这是一种高深的技术，其实不然，它并不高深，也很好学，oc与js交互还有另外一个很高大上的名字叫 Hybrid开发。&lt;/p&gt;
+
+&lt;p&gt;苹果提供了一个JavaScriptCore框架，用于oc与js交互，里面主要有这几个类&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;JSContext：给JavaScript提供运行的上下文环境&lt;/li&gt;
+  &lt;li&gt;JSValue：JavaScript和Objective-C数据和方法的桥梁&lt;/li&gt;
+  &lt;li&gt;JSManagedValue：管理数据和方法的类&lt;/li&gt;
+  &lt;li&gt;JSVirtualMachine：处理线程相关，使用较少&lt;/li&gt;
+  &lt;li&gt;JSExport：这是一个协议，如果采用协议的方法交互，自己定义的协议必须遵守此协议&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面我用最少的代码来实现js交互，为的就是让小白快速学会js交互，大神可以略过。。。这几个类不会全部用到，如果你感兴趣，可以看一下官方文档，深入学习。&lt;/p&gt;
+
+&lt;p&gt;js与oc交互，就是网页与原生代码互相调用，首先我们创建一个含有js代码的网页&lt;code class=&quot;highlighter-rouge&quot;&gt;js.html&lt;/code&gt;,里面有三个按钮，当点击按钮的时调用原生方法。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;js.html&lt;/code&gt; 源码如下&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+function buttonClick1(){
+ocObject.buttonClick();
+}
+function buttonClick2(){
+ocObject.buttonClick2(&quot;给我打印这个字符串&quot;);
+}
+function buttonClick3(){
+ocObject.buttonClick3(&quot;参数1&quot;,&quot;参数2&quot;,&quot;参数3&quot;);
+}
+&amp;lt;/script&amp;gt;
+&amp;lt;button onclick=&quot;buttonClick1()&quot;&amp;gt;调无参方法&amp;lt;/button&amp;gt;
+&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;
+&amp;lt;button onclick=&quot;buttonClick2()&quot;&amp;gt;调1个参方法&amp;lt;/button&amp;gt;
+&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;
+&amp;lt;button onclick=&quot;buttonClick3()&quot;&amp;gt;调3个参方法&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;创建一个与js交互的原生类&lt;code class=&quot;highlighter-rouge&quot;&gt;JSClass&lt;/code&gt;, 定义一个协议&lt;code class=&quot;highlighter-rouge&quot;&gt;JSClassDelegate &lt;/code&gt;继承自协议&lt;code class=&quot;highlighter-rouge&quot;&gt;JSExport&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;JSClassDelegate &lt;/code&gt;中定义了js调用的方法，&lt;code class=&quot;highlighter-rouge&quot;&gt;JSClass&lt;/code&gt;需遵守该协议才能与js交互。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;JSClass.h&lt;/code&gt; 源码如下&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#import &amp;lt;Foundation/Foundation.h&amp;gt;
+#import &amp;lt;JavaScriptCore/JavaScriptCore.h&amp;gt;
+@protocol JSClassDelegate &amp;lt;JSExport&amp;gt;
+- (void)buttonClick;
+- (void)buttonClick2:(NSString *)arg;
+- (void)buttonClick3:(NSString *)arg1 :(NSString*)arg2 :(NSString*)arg3;
+@end
+
+@interface JSClass : NSObject&amp;lt;JSClassDelegate&amp;gt;
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;JSClass.m&lt;/code&gt; 源码如下&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#import &quot;JSClass.h&quot;
+@implementation JSClass
+- (void)buttonClick{
+NSLog(@&quot;点击了按钮&quot;);
+}
+- (void)buttonClick2:(NSString *)arg{
+NSLog(@&quot;%@&quot;,arg);
+}
+- (void)buttonClick3:(NSString *)arg1 :(NSString *)arg2 :(NSString *)arg3{
+NSLog(@&quot;%@&quot;,arg1);
+NSLog(@&quot;%@&quot;,arg2);
+NSLog(@&quot;%@&quot;,arg3);
+}
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;有&lt;strong&gt;了html页面&lt;/strong&gt;和&lt;strong&gt;JSClass&lt;/strong&gt;，下面就可以将它们绑定起来了。
+直接上代码&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#import &quot;ViewController.h&quot;
+#import &quot;JSClass.h&quot;
+
+@interface ViewController ()&amp;lt;UIWebViewDelegate&amp;gt;
+@property (nonatomic,weak) UIWebView *webView;
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+[super viewDidLoad];
+NSString *path = [[NSBundle mainBundle] pathForResource:@&quot;js&quot; ofType:@&quot;html&quot;];
+NSString *content = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+if (content.length == 0) return;
+UIWebView *webView  = [[UIWebView alloc] init];
+webView.delegate = self;
+[self.view addSubview:webView];
+self.webView = webView;
+[webView loadHTMLString:content baseURL:nil];
+// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+//获取js上下文对象
+JSContext *context =[webView valueForKeyPath:@&quot;documentView.webView.mainFrame.javaScriptContext&quot;];
+//创建与js绑定的原生对象
+JSClass *jsObject = [JSClass new];
+//原生对象传给js
+context[@&quot;ocObject&quot;] = jsObject;
+}
+
+- (void)viewDidLayoutSubviews
+{
+[super viewDidLayoutSubviews];
+self.webView.frame = self.view.bounds;
+}
+
+- (void)didReceiveMemoryWarning {
+[super didReceiveMemoryWarning];
+// Dispose of any resources that can be recreated.
+}
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;效果&quot;&gt;效果&lt;/h1&gt;
+&lt;p&gt;我们来运行一下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://delims.github.io/cocoapods/images/hybrid.jpg&quot; alt=&quot;效果图&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;有点丑，但是不影响我们调试功能
+依次点击三个按钮后打印信息如下&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2018-08-02 16:06:03.116370+0800 Hybrid_demo[31435:3830397] 调用了oc的无参方法
+2018-08-02 16:06:04.581703+0800 Hybrid_demo[31435:3830397] 给我打印这个字符串
+2018-08-02 16:06:05.485736+0800 Hybrid_demo[31435:3830397] 参数1
+2018-08-02 16:06:05.486490+0800 Hybrid_demo[31435:3830397] 参数2
+2018-08-02 16:06:05.487110+0800 Hybrid_demo[31435:3830397] 参数3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;说明js已经成功调用了原生方法，是不是so easy&lt;/p&gt;
+
+&lt;p&gt;源码地址：&lt;a href=&quot;https://github.com/delims/Hybrid_demo.git&quot;&gt;https://github.com/delims/Hybrid_demo.git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;欢迎转载，转载请注明原文地址，谢谢~&lt;/p&gt;</content><author><name>delims</name></author><category term="iOS" /><summary type="html">前言 初次听到oc与js交互时，你可能会觉得这是一种高深的技术，其实不然，它并不高深，也很好学，oc与js交互还有另外一个很高大上的名字叫 Hybrid开发。</summary></entry><entry><title type="html">发布cocoapods库后,通过pod search 搜不到的解决办法</title><link href="http://localhost:4000/2018/07/24/%E5%8F%91%E5%B8%83CocoaPods%E5%BA%93%E5%90%8E,%E9%80%9A%E8%BF%87pod-search-%E6%90%9C%E4%B8%8D%E5%88%B0%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html" rel="alternate" type="text/html" title="发布cocoapods库后,通过pod search 搜不到的解决办法" /><published>2018-07-24T00:00:00+08:00</published><updated>2018-07-24T00:00:00+08:00</updated><id>http://localhost:4000/2018/07/24/%E5%8F%91%E5%B8%83CocoaPods%E5%BA%93%E5%90%8E,%E9%80%9A%E8%BF%87pod%20search%20%E6%90%9C%E4%B8%8D%E5%88%B0%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2018/07/24/%E5%8F%91%E5%B8%83CocoaPods%E5%BA%93%E5%90%8E,%E9%80%9A%E8%BF%87pod-search-%E6%90%9C%E4%B8%8D%E5%88%B0%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html">&lt;blockquote&gt;
+  &lt;p&gt;辛苦发布了CocoaPods框架后，通过pod search却搜不到，别着急，下面这个方法或许可以帮到你&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;search_index.json文件是pod search搜索时的缓存文件，删除 search_index.json&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rm ~/Library/Caches/CocoaPods/search_index.json&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;打开终端重新使用 pod search 搜索你的框架,这时 search_index.json 缓存文件会被重新生成,你的框架就可以搜索出来了。&lt;/p&gt;</content><author><name>delims</name></author><summary type="html">辛苦发布了CocoaPods框架后，通过pod search却搜不到，别着急，下面这个方法或许可以帮到你</summary></entry><entry><title type="html">动态计算cell高度遇到约束冲突的解决办法</title><link href="http://localhost:4000/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html" rel="alternate" type="text/html" title="动态计算cell高度遇到约束冲突的解决办法" /><published>2018-07-17T00:00:00+08:00</published><updated>2018-07-17T00:00:00+08:00</updated><id>http://localhost:4000/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;开发一个cell高度不确定的列表，我们通常的做法是给cell设置一个自上到下的约束，然后设置UITableView的rowHeight属性为UITableViewAutomaticDimension，这样cell就可以根据内容自适应高度，正常情况下是没有问题的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;前段时间我开发一个类似微信朋友圈的列表，cell上面有label和图片展示控件，图片展示控件是我自己封装的，取名为TXShowFileView，继承自UICollectionView的九宫格图片展示控件，也支持视频和附件。把TXShowFileView放在xib中，设置四周约束，这样整个cell自上到下的约束就设置完了，在给cell设置model的时候，会传值给TXShowFileView一组附件模型，TXShowFileView根据附件模型的类型和数量，自动计算自身大小，然后设置自身的高度约束。这样就可以确定cell的高度了。&lt;/p&gt;
+
+&lt;p&gt;起初是没有问题的，后来发现在滑动的时候会报一个警告，如下:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;&amp;lt;NSLayoutConstraint:0x1c0482bc0 UIImageView:0x1167efd90.height == 36&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0a8b8b0 TXAddFileView:0x1089ebc00.height == 80.3333&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0a8bcc0 UIImageView:0x1167efd90.top == TXMView:0x1167efba0.top + 12&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0484dd0 UILabel:0x1167effc0.top == UIImageView:0x1167efd90.top&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0484e20 UILabel:0x1167effc0.centerY == UIImageView:0x1167efd90.centerY - 10&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0a8be00 UILabel:0x1167f02a0.top == UILabel:0x1167effc0.bottom + 5&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0484ec0 UILabel:0x1167f0b40.top == UILabel:0x1167f02a0.bottom + 18&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0a8bfe0 TXMView:0x1167efba0.bottom == TXAddFileView:0x1089ebc00.bottom + 16&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0a8c080 TXAddFileView:0x1089ebc00.top == UILabel:0x1167f0b40.bottom + 12&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0485000 TXMView:0x1167efba0.top == UITableViewCellContentView:0x1167ef580.top&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0a8c300 UITableViewCellContentView:0x1167ef580.bottom == TXMView:0x1167efba0.bottom&amp;gt;&quot;,
+&quot;&amp;lt;NSLayoutConstraint:0x1c0a8cda0 UITableViewCellContentView:0x1167ef580.height == 101&amp;gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这个警告的出现会发生在有附件的cell重用为没有附件的cell时。或者没有附件的cell重用为有附件的cell时。没有附件时TXShowFileView的高度为零。
+你可能会想到我设置TXShowFileView的高度约束时，cell已经返回了。然而并不是这样的。返回cell时，高度约束已经设置完了。&lt;/p&gt;
+
+&lt;p&gt;一般出现这种警告往往就是约束冲突，你需要去掉一个引起冲突的约束。看着这个警告，我正准备从头到尾的排查一下到底是哪个约束出现了问题时。我注意到最后一行&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;NSLayoutConstraint:0x1c0a8cda0 UITableViewCellContentView:0x1167ef580.height == 101&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;很明显这是给cell的ContentView添加的约束，然而我并没有添加这个约束，我猜想这可能是系统计算出cell的高度，然后自己添加的。这样一来，系统自己给cell添加了一个高度约束，而我给cell子视图添加的自上到下的约束已经确定了cell的高度了，所以就出现了约束冲突。就算是添加了两次高度约束，那这两个高度应该是一样的啊，为什么还冲突呢，我也不知道，但是我想到了一个解决办法。&lt;/p&gt;
+
+&lt;p&gt;想到系统添加的约束应该比较强势的，UILayoutPriorityRequired。那我就TXShowFileView的高度约束设置为 UILayoutPriorityDefaultHigh 试试。果然，通过调试发现没有报警告了。&lt;/p&gt;
+
+&lt;p&gt;正常使用autolayout约束应该是非常清晰明确有条理的，这样才不会导致约束冲突 ，但是有些情况下难免会出现约束冲突，&lt;strong&gt;这时候可以适当的降低一下约束的权重来避免冲突。&lt;/strong&gt;&lt;/p&gt;</content><author><name>delims</name></author><summary type="html">前言 开发一个cell高度不确定的列表，我们通常的做法是给cell设置一个自上到下的约束，然后设置UITableView的rowHeight属性为UITableViewAutomaticDimension，这样cell就可以根据内容自适应高度，正常情况下是没有问题的。</summary></entry></feed>

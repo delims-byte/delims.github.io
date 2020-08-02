@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>动态计算cell高度遇到约束冲突的解决办法 | Your awesome title</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="动态计算cell高度遇到约束冲突的解决办法" />
+<meta name="author" content="delims" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="前言 开发一个cell高度不确定的列表，我们通常的做法是给cell设置一个自上到下的约束，然后设置UITableView的rowHeight属性为UITableViewAutomaticDimension，这样cell就可以根据内容自适应高度，正常情况下是没有问题的。" />
+<meta property="og:description" content="前言 开发一个cell高度不确定的列表，我们通常的做法是给cell设置一个自上到下的约束，然后设置UITableView的rowHeight属性为UITableViewAutomaticDimension，这样cell就可以根据内容自适应高度，正常情况下是没有问题的。" />
+<link rel="canonical" href="http://localhost:4000/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html" />
+<meta property="og:url" content="http://localhost:4000/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-17T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"前言 开发一个cell高度不确定的列表，我们通常的做法是给cell设置一个自上到下的约束，然后设置UITableView的rowHeight属性为UITableViewAutomaticDimension，这样cell就可以根据内容自适应高度，正常情况下是没有问题的。","author":{"@type":"Person","name":"delims"},"@type":"BlogPosting","url":"http://localhost:4000/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html","headline":"动态计算cell高度遇到约束冲突的解决办法","dateModified":"2018-07-17T00:00:00+08:00","datePublished":"2018-07-17T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">动态计算cell高度遇到约束冲突的解决办法</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-07-17T00:00:00+08:00" itemprop="datePublished">Jul 17, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">delims</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="前言">前言</h1>
+<blockquote>
+  <p>开发一个cell高度不确定的列表，我们通常的做法是给cell设置一个自上到下的约束，然后设置UITableView的rowHeight属性为UITableViewAutomaticDimension，这样cell就可以根据内容自适应高度，正常情况下是没有问题的。</p>
+</blockquote>
+
+<p>前段时间我开发一个类似微信朋友圈的列表，cell上面有label和图片展示控件，图片展示控件是我自己封装的，取名为TXShowFileView，继承自UICollectionView的九宫格图片展示控件，也支持视频和附件。把TXShowFileView放在xib中，设置四周约束，这样整个cell自上到下的约束就设置完了，在给cell设置model的时候，会传值给TXShowFileView一组附件模型，TXShowFileView根据附件模型的类型和数量，自动计算自身大小，然后设置自身的高度约束。这样就可以确定cell的高度了。</p>
+
+<p>起初是没有问题的，后来发现在滑动的时候会报一个警告，如下:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"&lt;NSLayoutConstraint:0x1c0482bc0 UIImageView:0x1167efd90.height == 36&gt;",
+"&lt;NSLayoutConstraint:0x1c0a8b8b0 TXAddFileView:0x1089ebc00.height == 80.3333&gt;",
+"&lt;NSLayoutConstraint:0x1c0a8bcc0 UIImageView:0x1167efd90.top == TXMView:0x1167efba0.top + 12&gt;",
+"&lt;NSLayoutConstraint:0x1c0484dd0 UILabel:0x1167effc0.top == UIImageView:0x1167efd90.top&gt;",
+"&lt;NSLayoutConstraint:0x1c0484e20 UILabel:0x1167effc0.centerY == UIImageView:0x1167efd90.centerY - 10&gt;",
+"&lt;NSLayoutConstraint:0x1c0a8be00 UILabel:0x1167f02a0.top == UILabel:0x1167effc0.bottom + 5&gt;",
+"&lt;NSLayoutConstraint:0x1c0484ec0 UILabel:0x1167f0b40.top == UILabel:0x1167f02a0.bottom + 18&gt;",
+"&lt;NSLayoutConstraint:0x1c0a8bfe0 TXMView:0x1167efba0.bottom == TXAddFileView:0x1089ebc00.bottom + 16&gt;",
+"&lt;NSLayoutConstraint:0x1c0a8c080 TXAddFileView:0x1089ebc00.top == UILabel:0x1167f0b40.bottom + 12&gt;",
+"&lt;NSLayoutConstraint:0x1c0485000 TXMView:0x1167efba0.top == UITableViewCellContentView:0x1167ef580.top&gt;",
+"&lt;NSLayoutConstraint:0x1c0a8c300 UITableViewCellContentView:0x1167ef580.bottom == TXMView:0x1167efba0.bottom&gt;",
+"&lt;NSLayoutConstraint:0x1c0a8cda0 UITableViewCellContentView:0x1167ef580.height == 101&gt;"
+</code></pre></div></div>
+
+<p>这个警告的出现会发生在有附件的cell重用为没有附件的cell时。或者没有附件的cell重用为有附件的cell时。没有附件时TXShowFileView的高度为零。
+你可能会想到我设置TXShowFileView的高度约束时，cell已经返回了。然而并不是这样的。返回cell时，高度约束已经设置完了。</p>
+
+<p>一般出现这种警告往往就是约束冲突，你需要去掉一个引起冲突的约束。看着这个警告，我正准备从头到尾的排查一下到底是哪个约束出现了问题时。我注意到最后一行</p>
+
+<p><code class="highlighter-rouge">&lt;NSLayoutConstraint:0x1c0a8cda0 UITableViewCellContentView:0x1167ef580.height == 101&gt;</code></p>
+
+<p>很明显这是给cell的ContentView添加的约束，然而我并没有添加这个约束，我猜想这可能是系统计算出cell的高度，然后自己添加的。这样一来，系统自己给cell添加了一个高度约束，而我给cell子视图添加的自上到下的约束已经确定了cell的高度了，所以就出现了约束冲突。就算是添加了两次高度约束，那这两个高度应该是一样的啊，为什么还冲突呢，我也不知道，但是我想到了一个解决办法。</p>
+
+<p>想到系统添加的约束应该比较强势的，UILayoutPriorityRequired。那我就TXShowFileView的高度约束设置为 UILayoutPriorityDefaultHigh 试试。果然，通过调试发现没有报警告了。</p>
+
+<p>正常使用autolayout约束应该是非常清晰明确有条理的，这样才不会导致约束冲突 ，但是有些情况下难免会出现约束冲突，<strong>这时候可以适当的降低一下约束的权重来避免冲突。</strong></p>
+
+  </div><a class="u-url" href="/2018/07/17/%E5%8A%A8%E6%80%81%E8%AE%A1%E7%AE%97cell%E9%AB%98%E5%BA%A6%E9%81%87%E5%88%B0%E7%BA%A6%E6%9D%9F%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
