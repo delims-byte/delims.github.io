@@ -69,6 +69,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faraday (~> 0.17)
   jekyll (~> 4.1.1)
   jekyll-feed (~> 0.12)
   minima (~> 2.5)
